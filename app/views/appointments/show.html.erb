@@ -1,0 +1,5 @@
+<h1><%=@appointment.appointment_datetime.strftime('%B %d, %Y at %H:%M')%></h1>
+
+Doctor: <%=link_to "#{Doctor.find(@appointment.doctor_id).name}", doctor_path(Doctor.find(@appointment.doctor_id))%>
+<br>
+Patient: <%=link_to "#{Patient.find(@appointment.patient_id).name}", patient_path(Patient.find(@appointment.patient_id))%>
